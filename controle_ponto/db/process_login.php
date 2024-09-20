@@ -1,29 +1,41 @@
 <?php
 session_start();
-include '../db/conn.php';
+header('Content-Type: application/json');
 
-$response = array('success' => false, 'message' => ''); // Default response
+
+include 'conn.php';
+
+$response = ['success' => false, 'message' => ''];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $email = $_POST['email'];
-    $password = md5($_POST['password']); // Use password_verify() em produção
+    $passwordInput = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT * FROM usuarios WHERE email = ? AND password = ?");
-    $stmt->bind_param("ss", $email, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
+
+    $query = $conn->prepare("SELECT id, password FROM usuarios WHERE email = ?");
+    $query->bind_param("s", $email);
+    $query->execute();
+    $result = $query->get_result();
+
 
     if ($result->num_rows > 0) {
       $usuario = $result->fetch_assoc();
-      $_SESSION['usuario_id'] = $usuario['id'];
-      $response['success'] = true;
+
+
+      if (password_verify($passwordInput, $usuario['password'])) {
+        $_SESSION['usuario_id'] = $usuario['id'];
+        $response['success'] = true;
+      } else {
+        $response['message'] = "Login ou senha incorretos!";
+      }
     } else {
-      $response['message'] = "<p style='color:red;'>Login ou senha incorretos!</p>";
+      $response['message'] = "Usuário não encontrado!";
     }
   } else {
-    $response['message'] = "<p style='color:red;'>Por favor, preencha todos os campos</p>";
+    $response['message'] = "Por favor, preencha todos os campos.";
   }
 }
+
 
 echo json_encode($response);
