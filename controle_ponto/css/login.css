@@ -1,0 +1,23 @@
+body {
+	background-color: #eaf2f8;
+}
+
+.logo {
+	background-color: #f2f7fa;
+}
+
+h3 {
+	color: #333;
+}
+
+.btn-primary {
+	background-color: #007bff;
+}
+
+.btn-primary:hover {
+	background-color: #0056b3;
+}
+
+.shadow {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
