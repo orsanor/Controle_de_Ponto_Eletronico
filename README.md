@@ -1,7 +1,7 @@
 
-# Controle de Ponto Eletronico
+# Controle de Ponto Eletrônico
 
-Controle de Ponto Eletronico é um projeto que foi criado para ser apresentado como projeto final do curso de Programação Web no senac 
+O Controle de Ponto Eletrônico foi criado como projeto final do curso de Programação Web no Senac 
 
 
 - O que fazer para utilizar o projeto 
