@@ -10,7 +10,7 @@ include 'components/header.php';
 <style>
   #message {
     min-height: 20px;
-    margin-top: -6px;
+    margin-top: -3px;
     font-size: 13px;
   }
 </style>
@@ -32,7 +32,9 @@ include 'components/header.php';
             <label for="password" class="form-label">Senha</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="Senha">
           </div>
-          <p id="message"></p>
+          
+          <div id="message" style="visibility: hidden;"></div>
+
           <button type="submit" class="btn btn-primary w-100 mt-2">Entrar</button>
         </form>
         <button type="submit" class="btn btn-primary w-100 mt-1"
@@ -57,7 +59,7 @@ include 'components/header.php';
             if (data.success) {
               window.location.href = 'pages/record.php';
             } else {
-              $('#message').css('visibility', 'visible').html(data.message);
+              $('#message').css('color', 'red').css('visibility', 'visible').html(data.message);
             }
           }
         });
