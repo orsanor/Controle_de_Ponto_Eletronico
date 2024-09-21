@@ -19,7 +19,7 @@ include '../components/header.php';
 
   #message {
     min-height: 20px;
-    margin-top: -6px;
+    margin-top: -3px;
     font-size: 13px;
   }
 </style>
@@ -49,13 +49,15 @@ include '../components/header.php';
             <label for="password" class="form-label">Senha</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="Crie sua senha">
           </div>
-          <div class="mb-2">
+          <div class="mb-3">
             <label for="confirm_password" class="form-label">Confirmar Senha</label>
             <input type="password" name="confirm_password" class="form-control" id="confirm_password"
               placeholder="Confirme sua senha">
           </div>
-          <p id="message"></p>
-          <button type="submit" class="btn btn-primary w-100 mt-2">Registrar</button>
+
+          <div id="message" style="visibility: hidden;"></div>
+
+          <button type="submit" class="btn btn-primary w-100 mt-1">Registrar</button>
         </form>
       </div>
     </div>
@@ -70,16 +72,16 @@ include '../components/header.php';
         e.preventDefault();
 
         $.ajax({
-          url: 'db/process_registration.php',
+          url: '../db/process_register.php',
           type: 'POST',
           data: $(this).serialize(),
           success: function (response) {
-            const data = JSON.parse(response);
+            const data = response;
 
             if (data.success) {
-              window.location.href = 'pages/record.php';
+              $('#message').css('color', 'green').css('visibility', 'visible').html(data.message);
             } else {
-              $('#message').css('visibility', 'visible').html(data.message);
+              $('#message').css('color', 'red').css('visibility', 'visible').html(data.message);
             }
           }
         });
