@@ -37,7 +37,7 @@ include 'components/header.php';
 
           <button type="submit" class="btn btn-primary w-100 mt-2">Entrar</button>
         </form>
-        <button type="submit" class="btn btn-primary w-100 mt-1"
+        <button type="submit" class="btn btn-primary w-100"
           onclick="location.href='pages/register.php'">Registrar</button>
       </div>
     </div>
