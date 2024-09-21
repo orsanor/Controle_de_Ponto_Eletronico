@@ -1,17 +1,22 @@
 <?php
 session_start();
+$title = "Register Page";
+include '../components/header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../css/login.css">
-</head>
 <style>
+  .btn-secondary {
+    background-color: #fca549;
+    border: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: #f7941d;
+  }
+
   #message {
     min-height: 20px;
     margin-top: -6px;
@@ -31,18 +36,23 @@ session_start();
           Voltar
         </button>
         <h3 class="text-center mb-3 mt-3">Registre-se</h3>
-        <form id="loginForm">
+        <form id="registrationForm">
           <div class="mb-3">
-            <label for="email" class="form-label">Nome</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Insira seu nome completo">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" name="name" class="form-control" id="name" placeholder="Insira seu nome completo">
           </div>
-          <div class="mb-2">
+          <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" name="email" class="form-control" id="email" placeholder="Essa será sua matricula">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Essa será sua matrícula">
           </div>
-          <div class="mb-2">
+          <div class="mb-3">
             <label for="password" class="form-label">Senha</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="Crie sua senha">
+          </div>
+          <div class="mb-2">
+            <label for="confirm_password" class="form-label">Confirmar Senha</label>
+            <input type="password" name="confirm_password" class="form-control" id="confirm_password"
+              placeholder="Confirme sua senha">
           </div>
           <p id="message"></p>
           <button type="submit" class="btn btn-primary w-100 mt-2">Registrar</button>
@@ -56,11 +66,11 @@ session_start();
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function () {
-      $('#loginForm').on('submit', function (e) {
+      $('#registrationForm').on('submit', function (e) {
         e.preventDefault();
 
         $.ajax({
-          url: 'db/process_login.php',
+          url: 'db/process_registration.php',
           type: 'POST',
           data: $(this).serialize(),
           success: function (response) {
