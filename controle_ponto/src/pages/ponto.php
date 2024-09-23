@@ -8,25 +8,52 @@ include '../public/components/header.php';
 <link rel="stylesheet" href="../public/css/ponto.css" />
 <html lang="pt-br">
 
+<style>
+    .btn-secondary {
+        background-color: #fca549;
+        border: none;
+    }
+
+    .btn-secondary:hover {
+        background-color: #f7941d;
+    }
+
+    .nav-link {
+        font-weight: bold;
+        color: #004c97;
+        margin-left: 25px;
+        margin-top: 2px;
+        font-size: 16px;
+    }
+
+    .nav-link:hover {
+        color: #f7941d;
+    }
+</style>
+
 <body>
-    <nav class="navbar navbar-light bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: #D9DEE1;">
         <div class="container-fluid">
-            
-            <!-- <a class="navbar-brand" href="#">
-                <img src="../public/img/logo.png" height="45" alt="Logo" loading="lazy" class="logo"/>
-            </a>
-            <div class="teste">
-                <ul>
-                    <li><a href="record.php">Relatório</a></li>
-                    <li><a href="login.php">Sair</a></li>
-                </ul>
-            </div> -->
+            <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" style="margin-top: -1px;" />
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="record.php">Relatórios</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-secondary" onclick="location.href='login.php'">
+                    Sair
+                    <i class="fa-solid fa-person-walking-arrow-right" style="padding: 2px"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <div class="card">
         <div>
-            <h1 class="card-title">Olá, registre o seu ponto agora!</h1>
+            Olá, <?php echo htmlspecialchars($_SESSION['username']); ?>, registre o seu ponto agora!
             <p class="card-text">
             <div class="date_time">
                 <div id="current-date"></div>
@@ -63,7 +90,7 @@ include '../public/components/header.php';
                 updateClock(); 
             </script>
         </div>
-        <button class="my-button" type="button" href="#">Bater ponto</button>
+        <button class="my-button btn btn-secondary" type="button" href="#">Bater ponto</button>
     </div>
 
     <div class="date" id="current-date"></div>

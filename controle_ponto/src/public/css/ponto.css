@@ -5,19 +5,10 @@ body {
 .my-button {
     margin-left: 120px;
     margin-top: 30px;
-    background-color: #e28800;
-    color: #ffffff;
+    color: white;
     border: none;
-    border-radius: 5px;
     padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
     width: 200px;
-}
-
-.my-button:hover {
-    background-color: #ffd390;
 }
 
 .card {
@@ -66,14 +57,10 @@ nav ul li {
 }
 
 nav ul li a {
-    /* display: block; */
     color: #004c97;
-    /* text-align: center; */
     padding: 5px 5px;
     font-weight: bold;
     text-decoration: none;
-    /* margin-left: 12px; */
-    /* border-radius: 2px; */
 }
 
 nav ul li a:hover {
@@ -81,11 +68,6 @@ nav ul li a:hover {
 }
 
 .logo {}
-
-.container {
-    display: flex;
-    justify-content: start;
-}
 
 .nav_bar {
     margin-left: 70px;

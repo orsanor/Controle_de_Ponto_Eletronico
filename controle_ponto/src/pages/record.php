@@ -5,21 +5,49 @@ include '../public/components/header.php';
 ?>
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="../public/css/navbar.css" />
 <link rel="stylesheet" href="../public/css/record.css" />
 <html lang="pt-br">
 
+<style>
+  .btn-secondary {
+    background-color: #fca549;
+    border: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: #f7941d;
+  }
+
+  .nav-link {
+    font-weight: bold;
+    color: #004c97;
+    margin-left: 25px;
+    margin-top: 2px;
+    font-size: 16px;
+  }
+
+  .nav-link:hover {
+    color: #f7941d;
+  }
+</style>
+
 <body>
-  <nav>
-    <div>
-      <img class="logo" src="../public/img/logo.png" alt="logo">
-    </div>
-    <div class="nav_bar">
-      <ul>
-        <li><a href="ponto.php">Ponto</a></li>
-        <!-- <li><a href="#">Cadastro</a></li> -->
-        <li><a class="sair" href="login.php">SAIR</a></li>
+  <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: #D9DEE1;">
+    <div class="container-fluid">
+      <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" style="margin-top: -1px;" />
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="ponto.php">Bater Ponto</a>
+        </li>
       </ul>
+
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-secondary" onclick="location.href='login.php'">
+          Sair
+          <i class="fa-solid fa-person-walking-arrow-right" style="padding: 2px"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -62,6 +90,7 @@ include '../public/components/header.php';
     </div>
   </div>
 
+  <script src="https://kit.fontawesome.com/6943b72b92.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>

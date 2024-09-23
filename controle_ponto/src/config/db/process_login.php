@@ -25,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       if (password_verify($passwordInput, $usuario['password'])) {
         $_SESSION['usuario_id'] = $usuario['id'];
+        $_SESSION['username'] = $usuario['name'];
         $response['success'] = true;
       } else {
         $response['message'] = "Login ou senha incorretos!";
