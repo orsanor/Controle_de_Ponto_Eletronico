@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = "Login Page";
+$title = "Login";
 include 'components/header.php';
 ?>
 
@@ -32,7 +32,7 @@ include 'components/header.php';
             <label for="password" class="form-label">Senha</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="Senha">
           </div>
-          
+
           <div id="message" style="visibility: hidden;"></div>
 
           <button type="submit" class="btn btn-primary w-100 mt-2">Entrar</button>
@@ -45,27 +45,7 @@ include 'components/header.php';
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#loginForm').on('submit', function (e) {
-        e.preventDefault();
-
-        $.ajax({
-          url: 'db/process_login.php',
-          type: 'POST',
-          data: $(this).serialize(),
-          success: function (response) {
-            const data = response;
-            if (data.success) {
-              window.location.href = 'pages/record.php';
-            } else {
-              $('#message').css('color', 'red').css('visibility', 'visible').html(data.message);
-            }
-          }
-        });
-      });
-    });
-  </script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$title = "Register Page";
+$title = "Registro";
 include '../components/header.php';
 ?>
 
@@ -66,28 +66,7 @@ include '../components/header.php';
   <script src="https://kit.fontawesome.com/6943b72b92.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#registrationForm').on('submit', function (e) {
-        e.preventDefault();
-
-        $.ajax({
-          url: '../db/process_register.php',
-          type: 'POST',
-          data: $(this).serialize(),
-          success: function (response) {
-            const data = response;
-
-            if (data.success) {
-              $('#message').css('color', 'green').css('visibility', 'visible').html(data.message);
-            } else {
-              $('#message').css('color', 'red').css('visibility', 'visible').html(data.message);
-            }
-          }
-        });
-      });
-    });
-  </script>
+  <script src="../js/register.js"></script>
 </body>
 
 </html>
