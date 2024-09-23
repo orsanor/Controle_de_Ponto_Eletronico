@@ -1,15 +1,19 @@
 $(document).ready(() => {
-	$("#loginForm").on("submit", function (e) {
+	$("#registrationForm").on("submit", function (e) {
 		e.preventDefault();
 
 		$.ajax({
-			url: "db/process_login.php",
+			url: "../config/db/process_register.php",
 			type: "POST",
 			data: $(this).serialize(),
 			success: (response) => {
 				const data = response;
+
 				if (data.success) {
-					window.location.href = "pages/record.php";
+					$("#message")
+						.css("color", "green")
+						.css("visibility", "visible")
+						.html(data.message);
 				} else {
 					$("#message")
 						.css("color", "red")

@@ -1,19 +1,15 @@
 $(document).ready(() => {
-	$("#registrationForm").on("submit", function (e) {
+	$("#loginForm").on("submit", function (e) {
 		e.preventDefault();
 
 		$.ajax({
-			url: "../db/process_register.php",
+			url: "../config/db/process_login.php",
 			type: "POST",
 			data: $(this).serialize(),
 			success: (response) => {
 				const data = response;
-
 				if (data.success) {
-					$("#message")
-						.css("color", "green")
-						.css("visibility", "visible")
-						.html(data.message);
+					window.location.href = "/Projeto_Senac/controle_ponto/src/pages/record.php";
 				} else {
 					$("#message")
 						.css("color", "red")

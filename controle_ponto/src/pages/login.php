@@ -1,7 +1,7 @@
 <?php
 session_start();
 $title = "Login";
-include 'components/header.php';
+include '../public/components/header.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ include 'components/header.php';
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="row shadow rounded-3" style="width: 60%; background-color: #f5faff;">
       <div class="logo col-md-6 d-none d-md-flex justify-content-center align-items-center">
-        <img src="img/logo.png" alt="Ilustração" class="img-fluid">
+        <img src="\Projeto_Senac\controle_ponto\public\img\logo.png" alt="Ilustração" class="img-fluid">
       </div>
       <div class="col-md-6 p-4">
         <h3 class="text-center mb-4">Bem-vindo ao Controle de Ponto</h3>
@@ -38,14 +38,14 @@ include 'components/header.php';
           <button type="submit" class="btn btn-primary w-100 mt-2">Entrar</button>
         </form>
         <button type="submit" class="btn btn-primary w-100"
-          onclick="location.href='pages/register.php'">Registrar</button>
+          onclick="location.href='register.php'">Registrar</button>
       </div>
     </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/login.js"></script>
+  <script src="\Projeto_Senac\controle_ponto\src\public\js\login.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,11 @@
 <?php
 session_start();
 $title = "Relatorio";
-include '../components/header.php';
+include '../public/components/header.php';
 ?>
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="../css/navbar.css" />
+<link rel="stylesheet" href="../public/css/navbar.css" />
 <html lang="pt-br">
 
 <style>
@@ -33,13 +33,13 @@ include '../components/header.php';
 <body>
   <nav>
     <div>
-      <img class="logo" src="../img/logo.png" alt="">
+      <img class="logo" src="../public/img/logo.png" alt="logo">
     </div>
     <div class="linkstart">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#">Cadastro</a></li>
-        <li><a class="sair" href="../login.php">SAIR</a></li>
+        <li><a class="sair" href="login.php">SAIR</a></li>
       </ul>
     </div>
   </nav>
