@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+    color: #004c94;
+    background-color: white;
+  }
+
+  thead {
+    color: white;
+    background-color: #F7941D;
+  }
+
+  table {
+    margin-top: 20px;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+  }

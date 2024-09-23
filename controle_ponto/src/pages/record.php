@@ -6,39 +6,18 @@ include '../public/components/header.php';
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="../public/css/navbar.css" />
+<link rel="stylesheet" href="../public/css/record.css" />
 <html lang="pt-br">
-
-<style>
-  body {
-    text-align: center;
-    color: #004c94;
-    background-color: white;
-  }
-
-  thead {
-    color: white;
-    background-color: #F7941D;
-  }
-
-  table {
-    margin-top: 20px;
-  }
-
-  h2 {
-    display: flex;
-    justify-content: center;
-  }
-</style>
 
 <body>
   <nav>
     <div>
       <img class="logo" src="../public/img/logo.png" alt="logo">
     </div>
-    <div class="linkstart">
+    <div class="nav_bar">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#">Cadastro</a></li>
+        <li><a href="ponto.php">Ponto</a></li>
+        <!-- <li><a href="#">Cadastro</a></li> -->
         <li><a class="sair" href="login.php">SAIR</a></li>
       </ul>
     </div>

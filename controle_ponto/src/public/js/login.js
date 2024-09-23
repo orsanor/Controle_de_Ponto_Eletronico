@@ -9,7 +9,7 @@ $(document).ready(() => {
 			success: (response) => {
 				const data = response;
 				if (data.success) {
-					window.location.href = "/Projeto_Senac/controle_ponto/src/pages/record.php";
+					window.location.href = "../pages/ponto.php";
 				} else {
 					$("#message")
 						.css("color", "red")

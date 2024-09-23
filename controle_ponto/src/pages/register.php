@@ -28,7 +28,7 @@ include '../public/components/header.php';
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="row shadow rounded-3" style="width: 60%; background-color: #f5faff;">
       <div class="logo col-md-6 d-none d-md-flex justify-content-center align-items-center">
-        <img src="\Projeto_Senac\controle_ponto\public\img\logo.png" alt="Ilustração" class="img-fluid">
+        <img src="..\public\img\logo.png" alt="Ilustração" class="img-fluid">
       </div>
       <div class="col-md-6 p-4">
         <button type="submit" class="btn btn-secondary w-40" onclick="location.href='login.php'">
@@ -66,7 +66,7 @@ include '../public/components/header.php';
   <script src="https://kit.fontawesome.com/6943b72b92.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="\Projeto_Senac\controle_ponto\src\public\js\register.js"></script>
+  <script src="..\public\js\register.js"></script>
 </body>
 
 </html>

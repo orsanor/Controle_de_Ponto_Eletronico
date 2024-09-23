@@ -1,0 +1,93 @@
+body {
+    background-color: #f2f7fa;
+}
+
+.my-button {
+    margin-left: 120px;
+    margin-top: 30px;
+    background-color: #e28800;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 200px;
+}
+
+.my-button:hover {
+    background-color: #ffd390;
+}
+
+.card {
+    margin-top: 120px;
+    margin-left: 220px;
+    margin-right: 220px;
+    padding: 60px;
+    border-style: ridge;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.card-title {
+    margin-top: 90px;
+    color: #004c97;
+    margin-left: 120px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 60px;
+}
+
+.date_time {
+    font-size: 14px;
+    color: #412200;
+    margin-left: 120px;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    background-color: #050505;
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    /* display: block; */
+    color: #004c97;
+    /* text-align: center; */
+    padding: 5px 5px;
+    font-weight: bold;
+    text-decoration: none;
+    /* margin-left: 12px; */
+    /* border-radius: 2px; */
+}
+
+nav ul li a:hover {
+    color: #f7941d;
+}
+
+.logo {}
+
+.container {
+    display: flex;
+    justify-content: start;
+}
+
+.nav_bar {
+    margin-left: 70px;
+    margin-top: 10px;
+}
