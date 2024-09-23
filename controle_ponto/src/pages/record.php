@@ -2,6 +2,11 @@
 session_start();
 $title = "Relatorio";
 include '../public/components/header.php';
+
+if (!isset($_SESSION['username'])) {
+  header('Location: login.php');
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,13 +31,17 @@ include '../public/components/header.php';
     font-size: 16px;
   }
 
+  .navbar {
+    border-bottom: 3px solid #f38c00;
+  }
+
   .nav-link:hover {
-    color: #f7941d;
+    color: #fca549;
   }
 </style>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: #D9DEE1;">
+  <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: white;">
     <div class="container-fluid">
       <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" style="margin-top: -1px;" />
 
@@ -43,7 +52,7 @@ include '../public/components/header.php';
       </ul>
 
       <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-secondary" onclick="location.href='login.php'">
+        <button type="button" class="btn btn-secondary" onclick="location.href='../config/db/logout.php'">
           Sair
           <i class="fa-solid fa-person-walking-arrow-right" style="padding: 2px"></i>
         </button>
@@ -51,8 +60,7 @@ include '../public/components/header.php';
     </div>
   </nav>
 
-  <h1>Seu relatorio</h1>
-  <h2>Bem vindo<p id="">ᅠ (nome do funcionario)</p>
+  <h1 style="margin-top: 50px">Seu relatorio</h1>
   </h2>
   <div class="d-flex col-12 justify-content-center">
     <div class="col-6">

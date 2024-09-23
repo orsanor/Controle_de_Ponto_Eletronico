@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $passwordInput = $_POST['password'];
 
 
-    $query = $conn->prepare("SELECT id, password FROM usuarios WHERE email = ?");
+    $query = $conn->prepare("SELECT id, name, password FROM usuarios WHERE email = ?");
     $query->bind_param("s", $email);
     $query->execute();
     $result = $query->get_result();
@@ -27,6 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['usuario_id'] = $usuario['id'];
         $_SESSION['username'] = $usuario['name'];
         $response['success'] = true;
+        $response['user'] = [
+          'id' => $usuario['id'],
+          'name' => $usuario['name']
+        ];
       } else {
         $response['message'] = "Login ou senha incorretos!";
       }

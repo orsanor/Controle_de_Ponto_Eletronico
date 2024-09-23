@@ -1,75 +1,67 @@
 body {
-    background-color: #f2f7fa;
+	background-color: #f2f7fa;
 }
 
 .my-button {
-    margin-left: 120px;
-    margin-top: 30px;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    width: 200px;
+	margin-left: 120px;
+	margin-top: 30px;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	width: 200px;
 }
 
 .card {
-    margin-top: 120px;
-    margin-left: 220px;
-    margin-right: 220px;
-    padding: 60px;
-    border-style: ridge;
-    border-radius: 10px;
-    background-color: #ffffff;
-    overflow: hidden;
+	margin-top: 120px;
+	margin-left: 220px;
+	margin-right: 220px;
+	padding: 60px;
+	border-style: ridge;
+	border-radius: 10px;
+	background-color: white;
+	overflow: hidden;
 }
 
 .card-title {
-    margin-top: 90px;
-    color: #004c97;
-    margin-left: 120px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 60px;
+	margin-top: 30px;
+	color: #004c97;
+	margin-left: 120px;
+	font-size: 60px;
+    font-weight: bold;
 }
 
 .date_time {
-    font-size: 14px;
-    color: #412200;
-    margin-left: 120px;
-
+	font-size: 15px;
+    font-weight: normal;
+	color: black;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-
-nav {
-    background-color: #050505;
-    display: flex;
+.btn-secondary {
+    background-color: #fca549;
+    border: none;
 }
 
-nav ul {
-    list-style-type: none;
+.btn-secondary:hover {
+    background-color: #f7941d;
 }
 
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    color: #004c97;
-    padding: 5px 5px;
+.nav-link {
     font-weight: bold;
-    text-decoration: none;
+    color: #004c97;
+    margin-left: 25px;
+    margin-top: 2px;
+    font-size: 16px;
 }
 
-nav ul li a:hover {
-    color: #f7941d;
+.navbar {
+    border-bottom: 3px solid #f38c00;
 }
 
-.logo {}
-
-.nav_bar {
-    margin-left: 70px;
-    margin-top: 10px;
+.nav-link:hover {
+    color: #fca549;
 }
