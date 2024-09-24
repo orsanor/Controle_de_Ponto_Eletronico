@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
         </li>
       </ul>
       <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-secondary" onclick="location.href='../config/db/logout.php'">
+        <button type="button" class="btn btn-warning" onclick="location.href='../config/db/logout.php'">
           Sair
           <i class="fa-solid fa-person-walking-arrow-right" style="padding: 2px"></i>
         </button>

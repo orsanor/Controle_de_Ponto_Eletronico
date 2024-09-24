@@ -19,29 +19,88 @@ body {
 	border-style: ridge;
 	border-radius: 10px;
 	background-color: white;
-	overflow: hidden;
 }
 
 .card-title {
 	margin-top: 30px;
 	color: #004c97;
-	margin-left: 120px;
-	font-size: 60px;
+	display: flex;
+	align-items: flex-start;
 	font-weight: bold;
+	font-size: 55px;
+}
+
+.welcome-text {
+	flex: 1;
 }
 
 .date_time {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
 	font-size: 15px;
-	font-weight: normal;
-	color: black;
+	font-weight: bold;
+	color: #333;
 }
 
-.btn-secondary {
+#clock {
+	font-weight: bold;
+}
+
+.info-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-top: 50px;
+}
+
+.saldos {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.saldo-container {
+	display: flex;
+	flex-direction: column;
+	background-color: #eef3f7;
+	padding: 40px;
+	border-radius: 8px;
+	font-weight: bold;
+}
+
+.saldo {
+	font-size: 16px;
+	color: #333;
+}
+
+.saldo span {
+	font-weight: bold;
+	font-size: 16px;
+	color: #666;
+}
+
+.saldo-valor {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
+.ultimo-registro {
+	font-size: 14px;
+	color: #888;
+	margin-top: 2px;
+}
+
+.btn-warning {
+	margin-left: 0;
 	background-color: #fca549;
 	border: none;
+	color: white;
 }
 
-.btn-secondary:hover {
+.btn-warning:hover {
 	background-color: #f7941d;
 }
 
@@ -52,7 +111,7 @@ body {
 	font-size: 16px;
 }
 
-ul{
+ul {
 	margin-left: 25px;
 }
 
