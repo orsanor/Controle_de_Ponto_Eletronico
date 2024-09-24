@@ -11,46 +11,21 @@ if (!isset($_SESSION['username'])) {
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="../public/css/record.css" />
+<link rel="stylesheet" href="../public/css/ponto.css" />
 <html lang="pt-br">
-
-<style>
-  .btn-secondary {
-    background-color: #fca549;
-    border: none;
-  }
-
-  .btn-secondary:hover {
-    background-color: #f7941d;
-  }
-
-  .nav-link {
-    font-weight: bold;
-    color: #004c97;
-    margin-left: 25px;
-    margin-top: 2px;
-    font-size: 16px;
-  }
-
-  .navbar {
-    border-bottom: 3px solid #f38c00;
-  }
-
-  .nav-link:hover {
-    color: #fca549;
-  }
-</style>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: white;">
     <div class="container-fluid">
-      <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" style="margin-top: -1px;" />
-
+      <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" />
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="ponto.php">Bater Ponto</a>
+          <a class="nav-link" href="ponto.php">Bater ponto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="record.php">Relatórios</a>
         </li>
       </ul>
-
       <div class="d-flex align-items-center">
         <button type="button" class="btn btn-secondary" onclick="location.href='../config/db/logout.php'">
           Sair

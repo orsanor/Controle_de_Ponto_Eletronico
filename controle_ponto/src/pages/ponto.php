@@ -16,14 +16,15 @@ if (!isset($_SESSION['username'])) {
 <body>
     <nav class="navbar navbar-expand-lg navbar-light w-100" style="background-color: white;">
         <div class="container-fluid">
-            <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" style="margin-top: -1px;" />
-
+            <img src="../public/img/logo.png" height="40" alt="Logo" loading="lazy" />
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="ponto.php">Bater ponto</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="record.php">Relatórios</a>
                 </li>
             </ul>
-
             <div class="d-flex align-items-center">
                 <button type="button" class="btn btn-secondary" onclick="location.href='../config/db/logout.php'">
                     Sair
@@ -35,7 +36,7 @@ if (!isset($_SESSION['username'])) {
 
     <div class="card">
         <div class="card-title">
-            Olá, <?php echo htmlspecialchars($_SESSION['username']); ?> 😉😊😄☺️
+            Olá, <?php echo htmlspecialchars($_SESSION['username']); ?> 😉
             <br>
             registre o seu ponto agora!
             <p class="card-text">

@@ -27,41 +27,39 @@ body {
 	color: #004c97;
 	margin-left: 120px;
 	font-size: 60px;
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .date_time {
 	font-size: 15px;
-    font-weight: normal;
+	font-weight: normal;
 	color: black;
 }
 
-ul {
-	margin: 0;
-	padding: 0;
-}
-
 .btn-secondary {
-    background-color: #fca549;
-    border: none;
+	background-color: #fca549;
+	border: none;
 }
 
 .btn-secondary:hover {
-    background-color: #f7941d;
+	background-color: #f7941d;
 }
 
 .nav-link {
-    font-weight: bold;
-    color: #004c97;
-    margin-left: 25px;
-    margin-top: 2px;
-    font-size: 16px;
+	font-weight: bold;
+	color: #004c97;
+	margin-top: 2px;
+	font-size: 16px;
+}
+
+ul{
+	margin-left: 25px;
 }
 
 .navbar {
-    border-bottom: 3px solid #f38c00;
+	border-bottom: 3px solid #f38c00;
 }
 
 .nav-link:hover {
-    color: #fca549;
+	color: #fca549;
 }
