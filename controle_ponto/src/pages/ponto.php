@@ -53,18 +53,18 @@ if (!isset($_SESSION['username'])) {
                     <div class="saldo-container">
                         <div class="saldo">
                             <span>Saldo mês</span>
-                            <p class="saldo-valor">+4h32min</p>
+                            <p class="saldo-valor">+0h00min</p>
                         </div>
                     </div>
                     <div class="saldo-container" style="background-color: #dde7ef">
                         <div class="saldo" >
                             <span>Saldo geral</span>
-                            <p class="saldo-valor">+40h42min</p>
+                            <p class="saldo-valor">+0h00min</p>
                         </div>
                     </div>
                 </div>
                 <div class="ultimo-registro">
-                    Último registro no dia 21/05/20, às 23h32min
+                    Último registro no dia 24/09/24, às 00h00min
                 </div>
             </div>
         </div>
