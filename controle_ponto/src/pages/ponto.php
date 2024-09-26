@@ -57,7 +57,7 @@ if (!isset($_SESSION['username'])) {
                         </div>
                     </div>
                     <div class="saldo-container" style="background-color: #dde7ef">
-                        <div class="saldo" >
+                        <div class="saldo">
                             <span>Saldo geral</span>
                             <p class="saldo-valor">+0h00min</p>
                         </div>
@@ -68,7 +68,26 @@ if (!isset($_SESSION['username'])) {
                 </div>
             </div>
         </div>
-        <button class="my-button btn btn-warning" type="button" href="#">Bater ponto</button>
+        <button class="my-button btn btn-warning" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Bater ponto</button>
+    </div>
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>

@@ -46,26 +46,30 @@ if (!isset($_SESSION['username'])) {
             <th>Horário de Entrada</th>
             <th>Horário de Saída</th>
             <th>Horas Trabalhadas</th>
+            <th>Carga Horária</th>
           </tr>
         </thead>
         <tbody class="table-group-divider">
           <tr>
             <td scope="row" class="date">19/09/2024</td>
-            <td id="">12:00,00</td>
-            <td id="">18:00,00</td>
-            <td id="">06:00,00</td>
+            <td id="">12:00</td>
+            <td id="">18:00</td>
+            <td id="">06:00</td>
+            <td id="">08:00</td>
           </tr>
           <tr>
             <td scope="row" class="date">17/09/2024</td>
-            <td id="">12:00,00</td>
-            <td id="">18:00,00</td>
-            <td id="">06:00,00</td>
+            <td id="">12:00</td>
+            <td id="">18:00</td>
+            <td id="">06:00</td>
+            <td id="">08:00</td>
           </tr>
           <tr>
             <td scope="row" class="date">16/09/2024</td>
-            <td id="">12:00,00</td>
-            <td id="">18:00,00</td>
-            <td id="">06:00,00</td>
+            <td id="">12:00</td>
+            <td id="">18:00</td>
+            <td id="">06:00</td>
+            <td id="">08:00</td>
           </tr>
         </tbody>
       </table>
