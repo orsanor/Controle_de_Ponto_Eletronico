@@ -1,0 +1,33 @@
+body {
+  color: #004c94;
+  background-color: #f2f7fa;
+}
+
+.table th {
+  background-color: #fca549;
+}
+
+.date{
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.main-content {
+	flex-grow: 1;
+	padding: 20px;
+	margin-left: 220px;
+	transition: margin-left 0.3s;
+}
+
+.main-content {
+	flex-grow: 1;
+	padding: 20px;
+	margin-left: 220px;
+}
