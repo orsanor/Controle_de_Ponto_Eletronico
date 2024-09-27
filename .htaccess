@@ -1,0 +1,15 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 hour"
+    ExpiresByType application/javascript "access plus 1 hour"
+    ExpiresByType image/png "access plus 1 hour"
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|png|jpg)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>

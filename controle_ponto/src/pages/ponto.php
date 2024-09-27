@@ -99,13 +99,6 @@ if (!isset($_SESSION['username'])) {
         </div>
     </div>
 
-    <script>
-        document.getElementById('toggle-btn').addEventListener('click', function () {
-            var sidebar = document.getElementById('sidebar');
-            var content = document.querySelector('.main-content');
-            sidebar.classList.toggle('collapsed');
-        });
-    </script>
     <script src="../public/js/date.js"></script>
     <script src="https://kit.fontawesome.com/6943b72b92.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

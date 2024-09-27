@@ -43,43 +43,35 @@ if (!isset($_SESSION['username'])) {
       </nav>
 
       <main class="col-md-8 ms-sm-auto col-lg-8 main-content">
-        <h1>Seu relatório</h1>
-        <div class="d-flex col-12 justify-content-center">
-          <div class="col-6">
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Data</th>
-                  <th>Horário de Entrada</th>
-                  <th>Horário de Saída</th>
-                  <th>Horas Trabalhadas</th>
-                  <th>Carga Horária</th>
-                </tr>
-              </thead>
-              <tbody class="table-group-divider">
-                <tr>
-                  <td scope="row" class="date">19/09/2024</td>
-                  <td id="">12:00</td>
-                  <td id="">18:00</td>
-                  <td id="">06:00</td>
-                  <td id="">08:00</td>
-                </tr>
-                <tr>
-                  <td scope="row" class="date">17/09/2024</td>
-                  <td id="">12:00</td>
-                  <td id="">18:00</td>
-                  <td id="">06:00</td>
-                  <td id="">08:00</td>
-                </tr>
-                <tr>
-                  <td scope="row" class="date">16/09/2024</td>
-                  <td id="">12:00</td>
-                  <td id="">18:00</td>
-                  <td id="">06:00</td>
-                  <td id="">08:00</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="card tabela col-12">
+          <div class="card-body">
+            <h1 class="card-title" style="color: #004c94;">Seu relatório</h1>
+            <?php
+            echo "
+    <div class='d-flex col-12 justify-content-center'>
+      <div class='col-6'>
+        <table class='table table-bordered''>
+          <thead>
+            <tr style='text-align: center;color: #004c94;background-color: white'>
+              <th scope='col' style='text-align: center; color: white;background-color: #F7941D'>Data</th>
+              <th scope='col' style='text-align: center; color: white;background-color: #F7941D'>Horário de Entrada</th>
+              <th scope='col' style='text-align: center; color: white;background-color: #F7941D'>Horário de Saída</th>
+              <th scope='col' style='text-align: center; color: white;background-color: #F7941D'>Horas Trabalhadas</th>
+            </tr>
+          <thead>
+        <tbody class='table-group-divider'>  
+      ";
+            echo "<tr style='text-align: center;color: #004c94;background-color: white'><td class='date' scope='row' >" . "27/09/2024" . "</th>";
+            echo "<td id='Hen'> " . "12:00,00" . "</td>";
+            echo "<td id='Hsa'>" . "18:00,00" . "</td>";
+            echo "<td id='Hto'></td></tr>";
+            echo "
+        </tbody>
+      </table>
+    </div>
+  </div>
+";
+            ?>
           </div>
         </div>
       </main>

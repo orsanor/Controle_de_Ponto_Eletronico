@@ -112,7 +112,7 @@ body {
 .ultimo-registro {
 	font-size: 14px;
 	color: #888;
-	margin-top: 2px;
+	padding: 10px;
 }
 
 .main-content {
