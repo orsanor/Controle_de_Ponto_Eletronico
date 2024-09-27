@@ -19,9 +19,6 @@ if (!isset($_SESSION['username'])) {
   <div class="container-fluid">
     <div class="row">
       <nav id="sidebar" class="sidebar">
-        <button id="toggle-btn" class="toggle-btn">
-          <i class="fas fa-bars"></i>
-        </button>
         <div class="sidebar-content">
           <img src="../public/img/logo.png" class="logo" alt="Logo" loading="lazy" />
           <ul class="nav flex-column">

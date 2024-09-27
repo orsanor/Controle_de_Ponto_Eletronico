@@ -18,9 +18,6 @@ if (!isset($_SESSION['username'])) {
     <div class="container-fluid">
         <div class="row">
             <nav id="sidebar" class="sidebar">
-                <button id="toggle-btn" class="toggle-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
                 <div class="sidebar-content">
                     <img src="../public/img/logo.png" class="logo" alt="Logo" loading="lazy" />
                     <ul class="nav flex-column">
@@ -38,13 +35,13 @@ if (!isset($_SESSION['username'])) {
                         </li>
                     </ul>
                     <button type="button" class="btn logout-btn" onclick="location.href='../config/db/logout.php'">
-                        Sair
                         <i class="fa-solid fa-person-walking-arrow-right"></i>
+                        <span class="link-text">Sair</span>
                     </button>
                 </div>
             </nav>
 
-            <main class="col-md-8 ms-sm-auto col-lg-8 main-content"> 
+            <main class="col-md-8 ms-sm-auto col-lg-8 main-content">
                 <div class="card mt-3">
                     <div class="card-title">
                         <div class="welcome-text">
