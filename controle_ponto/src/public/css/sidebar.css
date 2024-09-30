@@ -18,14 +18,11 @@
 
 .sidebar .logo {
 	width: 80px;
-	height: auto;
 	padding: 10px;
 	transition: width 0.3s ease;
 	margin-bottom: 20px;
 	background-color: #f8f9fa;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .sidebar:hover .logo {
@@ -40,7 +37,6 @@
 	transition: font-size 0.3s ease, transform 0.3s ease;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
 .sidebar .nav-link:hover {
@@ -73,8 +69,6 @@
 	transition: width 0.3s, padding-left 0.3s;
 	padding: 10px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-size: 0;
 	margin-left: 8px;
 }
