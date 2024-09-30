@@ -22,6 +22,18 @@ body {
 	margin-left: 220px;
 }
 
+.button_bater {
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	width: 80px;
+	background-color: #fca549;
+}
+
+.button_bater:hover {
+	background-color: #f7941d;
+}
+
 .my-button {
 	color: white;
 	border: none;

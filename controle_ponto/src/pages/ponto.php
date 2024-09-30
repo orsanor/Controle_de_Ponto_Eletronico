@@ -3,7 +3,7 @@ session_start();
 $title = "Bater ponto";
 include '../public/components/header.php';
 
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['usuario_id'])) {
     header('Location: login.php');
     exit;
 }
@@ -86,23 +86,27 @@ if (!isset($_SESSION['username'])) {
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Bater Ponto</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" label="close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div id="message"></div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <form id="baterPonto">
+                        <input type="hidden" id="usuario_id" value="<?php echo $_SESSION['usuario_id']; ?>">
+                        <button type="submit" class="button_bater btn btn-warning">Bater</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="../public/js/date.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://kit.fontawesome.com/6943b72b92.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../public/js/date.js"></script>
+    <script src="../public/js/ponto.js"></script>
 </body>
 
 </html>
