@@ -10,7 +10,7 @@ if (!isset($_SESSION['username'])) {
 ?>
 
 <!DOCTYPE html>
-<link rel="stylesheet" href="../public/css/record_1.css" />
+<link rel="stylesheet" href="../public/css/record.css" />
 <link rel="stylesheet" href="../public/css/sidebar.css" />
 <html lang="pt-br">
 

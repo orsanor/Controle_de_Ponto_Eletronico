@@ -49,6 +49,7 @@ if (!isset($_SESSION['username'])) {
                                 Registre o seu ponto agora!</p>
                             <div class="date_time">
                                 <div id="current-date"></div>
+                                -
                                 <div id="clock"></div>
                             </div>
                         </div>

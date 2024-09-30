@@ -1,22 +1,40 @@
-function formatDate(date) {
+function formatDate(date, locale = "pt-BR") {
 	const options = { year: "numeric", month: "long", day: "numeric" };
-	return date.toLocaleDateString("pt-BR", options);
+	return new Intl.DateTimeFormat(locale, options).format(date);
 }
 
 function displayCurrentDate() {
 	const today = new Date();
 	const formattedDate = formatDate(today);
-	document.getElementById("current-date").innerText = formattedDate;
+	const dateElement = document.getElementById("current-date");
+	if (dateElement) {
+		dateElement.textContent = formattedDate;
+	}
 }
 
-displayCurrentDate();
+function formatTime(date) {
+	const hours = String(date.getHours()).padStart(2, "0");
+	const minutes = String(date.getMinutes()).padStart(2, "0");
+	return `${hours}:${minutes}`;
+}
 
 function updateClock() {
 	const now = new Date();
-	const hours = String(now.getHours()).padStart(2, "0");
-	const minutes = String(now.getMinutes()).padStart(2, "0");
-	document.getElementById("clock").textContent = `${hours}:${minutes}`;
+	const clockElement = document.getElementById("clock");
+	if (clockElement) {
+		clockElement.textContent = formatTime(now);
+	}
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+function initClock() {
+	updateClock();
+	setTimeout(
+		() => {
+			setInterval(updateClock, 60 * 1000);
+		},
+		(60 - new Date().getSeconds()) * 1000,
+	);
+}
+
+displayCurrentDate();
+initClock();
