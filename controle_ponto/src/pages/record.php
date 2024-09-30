@@ -36,8 +36,8 @@ if (!isset($_SESSION['username'])) {
             </li>
           </ul>
           <button type="button" class="btn logout-btn" onclick="location.href='../config/db/logout.php'">
-            Sair
             <i class="fa-solid fa-person-walking-arrow-right"></i>
+            <span class="link-text">Sair</span>
           </button>
         </div>
       </nav>
