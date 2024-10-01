@@ -121,6 +121,13 @@ body {
 	margin: 5px 0;
 }
 
+.saldo-mes {
+	font-size: 18px;
+	color: #000;
+	font-weight: bold;
+	margin: 5px 0;
+}
+
 .ultimo-registro {
 	font-size: 14px;
 	color: #888;

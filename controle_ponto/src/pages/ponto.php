@@ -3,7 +3,7 @@ session_start();
 $title = "Bater ponto";
 include '../public/components/header.php';
 
-if (!isset($_SESSION['usuario_id'])) {
+if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
@@ -59,7 +59,7 @@ if (!isset($_SESSION['usuario_id'])) {
                                 <div class="saldo-container">
                                     <div class="saldo">
                                         <span>Saldo mês</span>
-                                        <p class="saldo-valor">+0h00min</p>
+                                        <p class="saldo-mes">+0h00min</p>
                                     </div>
                                 </div>
                                 <div class="saldo-container" style="background-color: #dde7ef">
@@ -70,7 +70,7 @@ if (!isset($_SESSION['usuario_id'])) {
                                 </div>
                             </div>
                             <div class="ultimo-registro">
-                                Último registro no dia 24/09/24, às 00h00min
+                                Último registro no dia --/--/--, às --h--min
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ if (!isset($_SESSION['usuario_id'])) {
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Bater Ponto</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Registre seu Ponto</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" label="close"></button>
                 </div>
                 <div class="modal-body">
@@ -94,7 +94,7 @@ if (!isset($_SESSION['usuario_id'])) {
                 </div>
                 <div class="modal-footer">
                     <form id="baterPonto">
-                        <input type="hidden" id="usuario_id" value="<?php echo $_SESSION['usuario_id']; ?>">
+                        <input type="hidden" id="user_id" value="<?php echo $_SESSION['user_id']; ?>">
                         <button type="submit" class="button_bater btn btn-warning">Bater</button>
                     </form>
                 </div>
@@ -107,6 +107,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/js/date.js"></script>
     <script src="../public/js/ponto.js"></script>
+    <script src="../public/js/get_total_hours.js"></script>
 </body>
 
 </html>
