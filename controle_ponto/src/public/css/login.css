@@ -3,9 +3,15 @@ body {
 }
 
 .logo {
-	background-color: #f2f7fa;
+	background: rgba(242, 247, 250, 0.46);
 }
 
+.card_main {
+	background: rgba(242, 247, 250, 0.46);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.3px);
+	-webkit-backdrop-filter: blur(5.3px);
+}
 h3 {
 	color: #333;
 	text-wrap: pretty;
@@ -13,7 +19,11 @@ h3 {
 
 .btn-primary {
 	background-color: #007bff;
-	border: none;
+	border-radius: 10px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(3.2px);
+	-webkit-backdrop-filter: blur(3.2px);
+	border: 1px solid rgba(242, 247, 250, 0.3);
 }
 
 .btn-primary:hover {

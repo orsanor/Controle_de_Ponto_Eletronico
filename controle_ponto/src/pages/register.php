@@ -30,8 +30,9 @@ include '../public/components/header.php';
       <div class="logo col-md-6 d-none d-md-flex justify-content-center align-items-center">
         <img src="..\public\img\logo.png" alt="Ilustração" class="img-fluid">
       </div>
-      <div class="col-md-6 p-4">
-        <button type="submit" class="btn btn-secondary w-40" onclick="location.href='login.php'">
+      <div class="card_main col-md-6 p-4">
+        <button type="submit" class="btn btn-secondary w-40" onclick="location.href='login.php'"
+          style="border-radius: 10px;">
           <i class="fa-solid fa-arrow-left"></i>
           Voltar
         </button>

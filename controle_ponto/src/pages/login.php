@@ -18,10 +18,10 @@ include '../public/components/header.php';
 <body>
   <div class="container d-flex justify-content-center align-items-center min-vh-100">
     <div class="row shadow rounded-3" style="width: 60%; background-color: #f5faff;">
-      <div class="logo col-md-6 d-none d-md-flex justify-content-center align-items-center">
-        <img src="..\public\img\logo.png" alt="Ilustração" class="img-fluid">
+      <div class="logo col-md-6 d-flex justify-content-center align-items-center">
+        <img src="../public/img/logo.png" alt="Ilustração" class="img-fluid">
       </div>
-      <div class="col-md-6 p-4">
+      <div class="card_main col-md-6 p-4">
         <h3 class="text-center mb-4">Bem-vindo ao Controle de Ponto</h3>
         <form id="loginForm">
           <div class="mb-3">
@@ -37,8 +37,7 @@ include '../public/components/header.php';
 
           <button type="submit" class="btn btn-primary w-100 mt-2">Entrar</button>
         </form>
-        <button type="submit" class="btn btn-primary w-100"
-          onclick="location.href='register.php'">Registrar</button>
+        <button type="submit" class="btn btn-primary w-100" onclick="location.href='register.php'">Registrar</button>
       </div>
     </div>
   </div>
