@@ -22,7 +22,7 @@ $(document).ready(() => {
 				}
 			},
 			error: () => {
-				alert("Erro ao carregar o saldo geral e o último registro.");
+				// alert("Erro ao carregar o saldo geral e o último registro.");
 				$(".saldo-valor").text("+0h00min");
 				$(".ultimo-registro").text("Erro ao carregar o último registro.");
 				$(".saldo-mes").text("+0h00min"); 
