@@ -7,10 +7,15 @@ include 'conn.php';
 $response = ['success' => false, 'message' => ''];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['confirm_password'])) {
+  if (
+    !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['name']) &&
+    !empty($_POST['confirm_password']) && !empty($_POST['genero']) && !empty($_POST['cargo'])
+  ) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confirmPassword = $_POST['confirm_password'];
+    $genero = $_POST['genero'];
+    $cargo = $_POST['cargo'];
 
     if ($password !== $confirmPassword) {
       $response['message'] = "As senhas não coincidem.";
@@ -25,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       if ($result->num_rows > 0) {
         $response['message'] = "Email já está em uso.";
       } else {
-        $insertQuery = $conn->prepare("INSERT INTO usuarios (name, email, password) VALUES (?, ?, ?)");
-        $insertQuery->bind_param("sss", $_POST['name'], $email, $hashedPassword);
+        $insertQuery = $conn->prepare("INSERT INTO usuarios (name, email, password, genero, cargo) VALUES (?, ?, ?, ?, ?)");
+        $insertQuery->bind_param("sssss", $_POST['name'], $email, $hashedPassword, $genero, $cargo);
 
         if ($insertQuery->execute()) {
           $response['success'] = true;

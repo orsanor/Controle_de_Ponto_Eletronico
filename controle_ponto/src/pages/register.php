@@ -46,6 +46,30 @@ include '../public/components/header.php';
             <input type="email" name="email" class="form-control" id="email" placeholder="Essa será sua matrícula">
           </div>
           <div class="mb-3">
+            <label for="cargo" class="form-label">Cargo</label>
+            <select class="form-select" name="cargo" id="cargo" required>
+              <option selected>Selecione um cargo de TI</option>
+              <option value="developer">Desenvolvedor</option>
+              <option value="data_analyst">Analista de Dados</option>
+              <option value="system_admin">Administrador de Sistemas</option>
+              <option value="network_engineer">Engenheiro de Redes</option>
+              <option value="project_manager">Gerente de Projetos</option>
+              <option value="qa_engineer">Engenheiro de Qualidade</option>
+              <option value="ux_designer">Designer de Experiência do Usuário</option>
+              <option value="devops_engineer">Engenheiro DevOps</option>
+              <option value="security_specialist">Especialista em Segurança</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="genero">Gênero</label> <br>
+            <select class="form-select" name="genero" id="genero">
+              <option selected>Selecione seu genero</option>
+              <option value="homem">Homem</option>
+              <option value="mulher">Mulher</option>
+              <option value="prefiro não informa">Prefiro não informar</option>
+            </select>
+          </div>
+          <div class="mb-3">
             <label for="password" class="form-label">Senha</label>
             <input type="password" name="password" class="form-control" id="password" placeholder="Crie sua senha">
           </div>

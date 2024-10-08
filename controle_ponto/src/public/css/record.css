@@ -13,7 +13,7 @@ body {
 
 h1 {
 	text-align: center;
-	margin-top: 60px;
+  text-decoration: underline #F7941D;
 	padding: 20px;
 	font-size: 48px;
 	font-weight: bold;
@@ -56,4 +56,7 @@ h1 {
 	color: orange;
 	color: gray;
 	margin: 5px 0 0;
+}
+.table{
+  margin-bottom: -2px;
 }

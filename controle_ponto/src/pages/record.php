@@ -11,6 +11,7 @@ if (!isset($_SESSION['user_id'])) {
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="../public/css/sidebar.css" />
+<link rel="stylesheet" href="../public/css/record.css" />
 <html lang="pt-br">
 
 <body>
@@ -51,71 +52,6 @@ if (!isset($_SESSION['user_id'])) {
           </div>
           <div class="hours"></div>
         </div>
-<style>
-body {
-	color: #004c94;
-	background-color: #f2f7fa;
-}
-
-.table th {
-	background-color: #fca549;
-}
-
-.date {
-	font-weight: bold;
-}
-
-h1 {
-	text-align: center;
-  text-decoration: underline #F7941D;
-	padding: 20px;
-	font-size: 48px;
-	font-weight: bold;
-}
-
-.main-content {
-	padding: 20px;
-	transition: margin-left 0.3s;
-}
-
-.header_perfil {
-	display: flex;
-	align-items: center;
-	margin-left: 10px;
-	padding: 10px;
-}
-
-.card_perfil img {
-	margin-top: 10px;
-	margin-left: 10px;
-	border-radius: 50%;
-	width: 80px;
-	height: 80px;
-	margin-bottom: 20px;
-	margin-right: 20px;
-}
-
-.info_perfil {
-	display: flex;
-	flex-direction: column;
-}
-
-.card_perfil h2 {
-	color: black;
-	margin: 0;
-	font-size: 24px;
-}
-
-.card_perfil p {
-	color: orange;
-	color: gray;
-	margin: 5px 0 0;
-}
-.table{
-  margin-bottom: -2px;
-}
-
-</style>
         <div class="card tabela col-10">
           <div class="card-body">
             <h1 class="card-title" style="color: #004c94;">Seu relatório de Ponto</h1>
