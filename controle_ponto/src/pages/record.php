@@ -2,7 +2,6 @@
 session_start();
 $title = "Relatorio";
 include '../public/components/header.php';
-
 if (!isset($_SESSION['user_id'])) {
   header('Location: login.php');
   exit;
@@ -44,11 +43,34 @@ if (!isset($_SESSION['user_id'])) {
       <main class="col-md-8 ms-sm-auto col-lg-10 main-content">
         <div class="card card_perfil col-10" style="margin-bottom: 20px;">
           <div class="header_perfil">
-            <img src="../public/img/avatar_masc.png">
+            <?php
+            if (isset($_SESSION['gender'])) {
+              if ($_SESSION['gender'] === 'homem') {
+                echo ' <img src="../public/img/avatar_man.png" alt="Avatar Masculino">';
+              } elseif ($_SESSION['gender'] === 'mulher') {
+                echo '<img src="../public/img/avatar_woman.png" alt="Avatar Feminino">';
+              } else {
+                echo '<img src="../public/img/non.jpg" alt="Avatar Neutro">';
+              }
+            }
+            ?>
             <div class="info_perfil">
               <h2><?php echo htmlspecialchars($_SESSION['username']); ?></h2>
-              <p>Analista de TI</p>
+              <h6>
+                <?php echo isset($_SESSION['role']) ? htmlspecialchars($_SESSION['role']) : 'Cargo não definido'; ?>
+              </h6>
             </div>
+            <div class="edit-perfil">
+              <button class="btn edit-btn btn-sm" onclick="">Editar Perfil</button>
+            </div>
+
+            <!-- <div>
+              <?php
+              echo '<pre>';
+              print_r($_SESSION);
+              echo '</pre>';
+              ?>
+            </div> -->
           </div>
           <div class="hours"></div>
         </div>
@@ -56,8 +78,8 @@ if (!isset($_SESSION['user_id'])) {
           <div class="card-body">
             <h1 class="card-title" style="color: #004c94;">Seu relatório de Ponto</h1>
             <div class='d-flex col-md-12 justify-content-center'>
-              <div class='col-md-12 ' >
-                <table class='table table-bordered ' id="registerTable" >
+              <div class='col-md-12 '>
+                <table class='table table-bordered ' id="registerTable">
                   <thead>
                     <tr style='text-align: center; color: #004c94; background-color: white'>
                       <th scope='col' style='text-align: center; color: white; background-color: #F7941D'>Data</th>

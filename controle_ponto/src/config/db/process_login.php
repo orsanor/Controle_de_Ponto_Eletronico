@@ -11,21 +11,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $passwordInput = $_POST['password'];
 
-    $query = $conn->prepare("SELECT id, name, password FROM usuarios WHERE email = ?");
+    $query = $conn->prepare("SELECT id, name, password, role, gender FROM usuarios WHERE email = ?");
     $query->bind_param("s", $email);
     $query->execute();
     $result = $query->get_result();
 
-    $usuario = $result->fetch_assoc();
+    $user = $result->fetch_assoc();
 
-    if ($usuario) {
-      if (password_verify($passwordInput, $usuario['password'])) {
-        $_SESSION['user_id'] = $usuario['id'];
-        $_SESSION['username'] = $usuario['name'];
+    if ($user) {
+      if (password_verify($passwordInput, $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['name'];
+        $_SESSION['role'] = $user['role'];
+        $_SESSION['gender'] = $user['gender'];
         $response['success'] = true;
         $response['user'] = [
-          'id' => $usuario['id'],
-          'name' => $usuario['name']
+          'id' => $user['id'],
+          'name' => $user['name']
         ];
       } else {
         $response['message'] = "Login ou senha incorretos!";

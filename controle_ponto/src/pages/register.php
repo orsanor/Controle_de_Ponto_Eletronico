@@ -46,27 +46,27 @@ include '../public/components/header.php';
             <input type="email" name="email" class="form-control" id="email" placeholder="Essa será sua matrícula">
           </div>
           <div class="mb-3">
-            <label for="cargo" class="form-label">Cargo</label>
-            <select class="form-select" name="cargo" id="cargo" required>
+            <label for="role" class="form-label">Cargo</label>
+            <select class="form-select" name="role" id="role" required>
               <option selected>Selecione um cargo de TI</option>
-              <option value="developer">Desenvolvedor</option>
-              <option value="data_analyst">Analista de Dados</option>
-              <option value="system_admin">Administrador de Sistemas</option>
-              <option value="network_engineer">Engenheiro de Redes</option>
-              <option value="project_manager">Gerente de Projetos</option>
-              <option value="qa_engineer">Engenheiro de Qualidade</option>
-              <option value="ux_designer">Designer de Experiência do Usuário</option>
-              <option value="devops_engineer">Engenheiro DevOps</option>
-              <option value="security_specialist">Especialista em Segurança</option>
+              <option value="Desenvolvedor">Desenvolvedor</option>
+              <option value="Analista de Dados">Analista de Dados</option>
+              <option value="Administrador de Sistemas">Administrador de Sistemas</option>
+              <option value="Engenheiro de Redes">Engenheiro de Redes</option>
+              <option value="Gerente de Projetos">Gerente de Projetos</option>
+              <option value="Engenheiro de Qualidade">Engenheiro de Qualidade</option>
+              <option value="Designer de Experiência do Usuário">Designer de Experiência do Usuário</option>
+              <option value="Engenheiro DevOps">Engenheiro DevOps</option>
+              <option value="Especialista em Segurança">Especialista em Segurança</option>
             </select>
           </div>
           <div class="mb-3">
-            <label for="genero">Gênero</label> <br>
-            <select class="form-select" name="genero" id="genero">
-              <option selected>Selecione seu genero</option>
+            <label for="gender">Gênero</label> <br>
+            <select class="form-select" name="gender" id="gender">
+              <option selected>Selecione seu gênero</option>
               <option value="homem">Homem</option>
               <option value="mulher">Mulher</option>
-              <option value="prefiro não informa">Prefiro não informar</option>
+              <option value="outros">Outros</option>
             </select>
           </div>
           <div class="mb-3">
