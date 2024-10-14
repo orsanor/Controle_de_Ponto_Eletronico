@@ -61,7 +61,7 @@ if (!isset($_SESSION['user_id'])) {
               </h6>
             </div>
             <div class="edit-perfil">
-              <button class="btn edit-btn btn-sm" onclick="">Editar Perfil</button>
+              <button class="btn edit-btn btn-sm" onclick="location.href='register_edit.php'">Editar Perfil</button>
             </div>
 
             <!-- <div>

@@ -48,16 +48,22 @@ include '../public/components/header.php';
           <div class="mb-3">
             <label for="role" class="form-label">Cargo</label>
             <select class="form-select" name="role" id="role" required>
-              <option selected>Selecione um cargo de TI</option>
-              <option value="Desenvolvedor">Desenvolvedor</option>
-              <option value="Analista de Dados">Analista de Dados</option>
-              <option value="Administrador de Sistemas">Administrador de Sistemas</option>
-              <option value="Engenheiro de Redes">Engenheiro de Redes</option>
-              <option value="Gerente de Projetos">Gerente de Projetos</option>
-              <option value="Engenheiro de Qualidade">Engenheiro de Qualidade</option>
-              <option value="Designer de Experiência do Usuário">Designer de Experiência do Usuário</option>
-              <option value="Engenheiro DevOps">Engenheiro DevOps</option>
-              <option value="Especialista em Segurança">Especialista em Segurança</option>
+                  <option selected>Selecione um cargo de TI</option>
+                  <option value="Desenvolvedor">Desenvolvedor</option>
+                  <option value="Analista de Sistemas">Analista de Sistemas</option>
+                  <option value="Analista de Dados">Analista de Dados</option>
+                  <option value="Administrador de Sistemas">Administrador de Sistemas</option>
+                  <option value="Engenheiro de Redes">Engenheiro de Redes</option>
+                  <option value="Gerente de Projetos">Gerente de Projetos</option>
+                  <option value="Engenheiro de Qualidade">Engenheiro de Qualidade</option>
+                  <option value="Designer de Experiência do Usuário">Designer de Experiência do Usuário</option>
+                  <option value="Engenheiro DevOps">Engenheiro DevOps</option>
+                  <option value="Especialista em Segurança">Especialista em Segurança</option>
+                  <option value="Cientista de Dados">Cientista de Dados</option>
+                  <option value="Arquiteto de Software">Arquiteto de Software</option>
+                  <option value="Desenvolvedor Front-end">Desenvolvedor Front-end</option>
+                  <option value="Desenvolvedor Back-end">Desenvolvedor Back-end</option>
+                  <option value="Consultor de TI">Consultor de TI</option>
             </select>
           </div>
           <div class="mb-3">
@@ -81,7 +87,7 @@ include '../public/components/header.php';
 
           <div id="message" style="visibility: hidden;"></div>
 
-          <button type="submit" class="btn btn-primary w-100 mt-1">Registrar</button>
+          <button type="submit" class="btn btn-primary w-100 mt-1" >Registrar</button>
         </form>
       </div>
     </div>
