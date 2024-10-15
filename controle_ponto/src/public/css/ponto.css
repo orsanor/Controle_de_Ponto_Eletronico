@@ -6,7 +6,7 @@ body {
 
 .logout-btn:hover {
 	background-color: #f7941d;
-	color: black;
+	color: #0056b3;
 }
 
 .main-content {
@@ -44,6 +44,7 @@ body {
 
 .my-button:hover {
 	background-color: #f7941d;
+	color: #0056b3;
 }
 
 .card {
