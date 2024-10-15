@@ -13,7 +13,7 @@ body {
 
 h1 {
 	text-align: center;
-	margin-top: 60px;
+	text-decoration: underline #F7941D;
 	padding: 20px;
 	font-size: 48px;
 	font-weight: bold;
@@ -26,9 +26,15 @@ h1 {
 
 .header_perfil {
 	display: flex;
+
 	align-items: center;
 	margin-left: 10px;
 	padding: 10px;
+}
+
+.edit-perfil {
+	margin-bottom: 70px;
+	margin-left: auto;
 }
 
 .card_perfil img {
@@ -50,10 +56,26 @@ h1 {
 	color: black;
 	margin: 0;
 	font-size: 24px;
+	margin-bottom: 8px;
 }
 
 .card_perfil p {
 	color: orange;
 	color: gray;
 	margin: 5px 0 0;
+}
+
+.table {
+	margin-bottom: -2px;
+}
+
+.edit-btn {
+	background-color: #fca549;
+	border: none;
+	color: white;
+}
+
+.edit-btn:hover {
+	background-color: #f7941d;
+	color: #0056b3;
 }

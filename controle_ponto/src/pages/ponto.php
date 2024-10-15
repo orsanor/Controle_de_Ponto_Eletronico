@@ -90,7 +90,7 @@ if (!isset($_SESSION['user_id'])) {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" label="close"></button>
                 </div>
                 <div class="modal-body">
-                    <div id="message"></div>
+                    <div id="message">Para bater o ponto, clique em "Bater".</div>
                 </div>
                 <div class="modal-footer">
                     <form id="baterPonto">
