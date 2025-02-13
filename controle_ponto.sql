@@ -53,7 +53,6 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `name`, `email`, `password`) VALUES
 (1, 'Jonathan', 'teste@gmail.com', '$2y$10$PJSuPp7bFEmXLMM0CloZxek6dZTegfy6XS.Vx4/9.WfcO9IFAhRFC'),
-(2, 'Rafael', 'orsanor@gmail.com', '$2y$10$dSp5zXd.O3WMlY7hMjHdPu0IhOBYjG3a9QhgLBi717XuG8.j3ssVW'),
 (4, 'oi', 'oi@gmail.com', '$2y$10$df6cLtslNo5kVjzdpWP20umxtKT8jwWASmu9InrFSYquYtSuLqb32');
 
 --
